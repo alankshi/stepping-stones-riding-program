@@ -1,0 +1,7 @@
+.volunteering-container {
+    height: 916px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}

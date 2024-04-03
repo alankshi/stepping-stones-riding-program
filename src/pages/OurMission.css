@@ -1,0 +1,58 @@
+.mission-our-mission-container {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    position: relative;
+    height: 916px;
+}
+
+.mission-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.mission-title {
+    color: #fff;
+    text-align: center;
+    font-family: Forum;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0px;
+}
+
+.mission-text {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    max-width: 950px;
+}
+
+.mission-video-background {
+}
+
+.mission-video-container {
+    overflow: hidden;
+    height: 960px;
+}
+
+.mission-text-container::after {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 960px; /*same as mission-video-container*/
+    z-index: -1;
+    box-shadow: 0px 515px 250px -250px rgba(0, 194, 255, 0.5) inset;
+}
