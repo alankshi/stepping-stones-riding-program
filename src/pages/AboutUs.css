@@ -4,6 +4,7 @@
     align-items: flex-start;
     align-self: stretch;
     height: 916px;
+    overflow: clip;
 }
 
 .about-image {
