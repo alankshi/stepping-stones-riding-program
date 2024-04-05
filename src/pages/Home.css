@@ -1,8 +1,8 @@
 .home-container {
-    --home-stone-0-rotation: 116.757deg;
+    --home-stone-0-rotation: 120deg;
     --home-stone-1-rotation: 0deg;
-    --home-stone-2-rotation: 64.267deg;
-    --home-stone-3-rotation: -19.789deg;
+    --home-stone-2-rotation: 60deg;
+    --home-stone-3-rotation: -20    deg;
 
     padding-bottom: 25px;
 }
@@ -37,8 +37,8 @@
 
 .home-stone-1-container {
     display: flex;
-    width: 264.189px;
-    /* width: 18.35vw; */
+    /* width: 264.189px; */
+    width: 18.35vw;
     height: 356px;
     justify-content: space-between;
     align-items: center;
@@ -69,14 +69,24 @@
 
 .home-stone-0-image {
     transform: rotate(calc(var(--home-stone-0-rotation) * -1));
+
+    /* width: 373px; */
+    /* height: 434px; */
+    width: calc(434vw / 14.40);
 }
 
 .home-stone-1-image {
     transform: rotate(calc(var(--home-stone-1-rotation) * -1));
+    
+    /* width: 266px; */
+    /* height: 357px; */
+    width: calc(266vw / 14.40);
 }
 
 .home-stone-2-image {
     transform: rotate(calc(var(--home-stone-2-rotation) * -1));
+
+
 }
 
 .home-stone-3-image {
@@ -85,8 +95,9 @@
 
 .home-mask-0 {
     mask-image: url("../assets/stone-silhouette.png");
-    mask-size: 327.048px 411.019px;
+    /* mask-size: 327.048px 411.019px; */
     /* mask-size: 22.71vw 38.06vh; */
+    mask-size: auto 26.543vw;
     mask-repeat: no-repeat;
     mask-position: center;
     transform: rotate(var(--home-stone-0-rotation));
@@ -97,7 +108,8 @@
 
 .home-mask-1 {
     mask-image: url("../assets/stone-silhouette.png");
-    mask-size: 264.189px 356px;
+    /* mask-size: 264.189px 356px; */
+    mask-size: 18.35vw;
     mask-repeat: no-repeat;
     mask-position: center;
     transform: rotate(var(--home-stone-1-rotation));
