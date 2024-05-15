@@ -1,114 +1,113 @@
 .about-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    align-self: stretch;
-    height: 916px;
-    overflow: clip;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  overflow: clip;
 }
 
 .about-image {
-    width: 50%;
+  width: 50%;
 }
 
 .about-content {
-    display: flex;
-    padding: 25px 50px;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    flex: 1 0 0;
-    align-self: stretch;
-    height: auto;
-    overflow: hidden;
-}
-
-.about-title {
-    align-self: stretch;
-    color: #000;
-    text-align: center;
-    font-family: Forum;
-    font-size: 128px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  display: flex;
+  padding: 25px 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  flex: 1 0 0;
+  align-self: stretch;
 }
 
 .about-main-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    color: #000;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  align-self: stretch;
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  user-select: text;
+  z-index: 3;
 }
 
 .about-learn-more-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 27px;
-    align-self: stretch;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+  align-self: stretch;
+  position: relative;
 }
 
 .about-learn-more-button {
-    display: flex;
-    padding: 20px 84px;
-    align-items: center;
-    gap: 10px;
-    border: 5px solid #000;
-    color: #000;
-    text-align: center;
-    font-family: Inter;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    background-color: #f5f5f5;
-    z-index: 1;
+  display: flex;
+  padding: 20px 84px;
+  align-items: center;
+  gap: 10px;
+  border: 5px solid #000;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: #f5f5f5;
+  z-index: 1;
 }
 
 .about-learn-more-button:active {
-    background: #e2e2e2;
+  background: #e2e2e2;
 }
 
 .about-learn-more-button-line {
-    position: absolute;
-    color: black;
-    background-color: black;
-    outline: none;
-    border: none;
-    height: 5px;
-    width: 100%;
-    z-index: 0;
-    margin: 0px;
-    transition: width 0.5s ease;
+  position: absolute;
+  color: black;
+  background-color: black;
+  outline: none;
+  border: none;
+  height: 5px;
+  width: 100%;
+  z-index: 0;
+  margin: 0px;
+  transition: width 0.5s ease;
 }
 
 .about-learn-more-downarrow {
-    position: absolute;
-    transition: all 0.5s ease;
-    background: #f5f5f5;
-    padding-left: 50%;
-    padding-right: 50%;
-    padding-bottom: 100%;
-    padding-top: 27px;
+  display: block;
+  position: absolute;
+  transition: all 0.5s ease;
+  background: #f5f5f5;
+  padding-top: 27px;
+  z-index: 3;
 }
 
-.about-learn-more-text {
-    color: #000;
-    align-self: stretch;
-    text-align: justify;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+@media screen and (min-width: 700px) {
+  .about-container {
+  }
+
+  .about-main-text {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-container {
+  }
+
+  .about-main-text {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .about-container {
+  }
+
+  .about-main-text {
+    font-size: 44px;
+  }
 }
