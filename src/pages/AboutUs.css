@@ -86,27 +86,18 @@
 }
 
 @media screen and (min-width: 700px) {
-  .about-container {
-  }
-
   .about-main-text {
     font-size: 28px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .about-container {
-  }
-
   .about-main-text {
     font-size: 36px;
   }
 }
 
 @media screen and (min-width: 1920px) {
-  .about-container {
-  }
-
   .about-main-text {
     font-size: 44px;
   }
