@@ -4,3 +4,10 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
+@media screen and (min-width: 1920px) {
+  .carousel-indicator {
+    width: 18px;
+    height: 18px;
+  }
+}

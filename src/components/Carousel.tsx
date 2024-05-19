@@ -22,11 +22,10 @@ const Carousel = (props: { images: string[] }) => {
   return (
     <div className="container-carousel">
       <div
-        className="carousel-image-container bg-center bg-no-repeat bg-cover"
+        className="carousel-image-container bg-center bg-no-repeat bg-cover flex-1"
         ref={imageRef}
         style={{
           backgroundImage: `url(${props.images[currentImage]})`,
-          height: 500,
         }}
       ></div>
       <div style={{ width: imageWidth }} className="carousel-nav-container">
