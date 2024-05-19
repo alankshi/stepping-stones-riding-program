@@ -1,9 +1,10 @@
 import "./Carousel.css";
 import CarouselIndicators from "./CarouselIndicators";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Carousel = (props: { images: string[] }) => {
   const [currentImage, setCurrentImage] = useState<number>(0);
+  const [render, setRender] = useState<boolean>(false);
 
   const imageRef: React.RefObject<HTMLDivElement> =
     useRef<HTMLDivElement>(null);
@@ -19,10 +20,18 @@ const Carousel = (props: { images: string[] }) => {
     );
   };
 
+  const reRender = () => {
+    setRender(!render);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", reRender);
+  });
+
   return (
     <div className="container-carousel">
       <div
-        className="carousel-image-container bg-center bg-no-repeat bg-cover flex-1"
+        className="bg-center bg-no-repeat bg-cover flex-1"
         ref={imageRef}
         style={{
           backgroundImage: `url(${props.images[currentImage]})`,

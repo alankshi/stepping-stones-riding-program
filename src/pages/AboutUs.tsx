@@ -11,6 +11,7 @@ const AboutUs = forwardRef(
     ref: React.ForwardedRef<HTMLDivElement>
   ) => {
     const [learningMore, setLearningMore] = useState<boolean>(false);
+    const [render, setRender] = useState<boolean>(false);
 
     const handleClick = (): void => {
       setLearningMore(!learningMore);
@@ -25,6 +26,14 @@ const AboutUs = forwardRef(
         });
       }
     }, [learningMore]);
+
+    const reRender = () => {
+      setRender(!render);
+    };
+
+    useEffect(() => {
+      window.addEventListener("resize", reRender);
+    });
 
     const contentRef: React.RefObject<HTMLDivElement> =
       useRef<HTMLDivElement>(null);

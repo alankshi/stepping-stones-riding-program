@@ -27,7 +27,6 @@
   display: flex;
   height: 488.92px;
   width: 516.335px;
-  /* width: 35.9vw; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +35,6 @@
 
 .home-stone-1-container {
   display: flex;
-  /* width: 264.189px; */
   width: 18.35vw;
   height: 356px;
   justify-content: space-between;
@@ -68,21 +66,10 @@
 
 .home-stone-0-image {
   transform: rotate(calc(var(--home-stone-0-rotation) * -1));
-
-  width: 373px;
-  height: 434px;
-
-  width: 399.11px;
-  height: 464.38px;
-  /* width: calc(434vw / 14.40); */
 }
 
 .home-stone-1-image {
   transform: rotate(calc(var(--home-stone-1-rotation) * -1));
-
-  width: 266px;
-  height: 357px;
-  /* width: calc(266vw / 14.40); */
 }
 
 .home-stone-2-image {
@@ -127,7 +114,7 @@
 
   position: absolute;
   left: 20px;
-  top: -88px;
+  bottom: 124px;
 }
 
 .home-mask-3 {
@@ -199,7 +186,29 @@
   background: #e2e2e2;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 960px) {
+}
+
+@media screen and (min-width: 1280px) {
+  .home-stone-0-image {
+    width: 399.11px;
+    height: 464.38px;
+  }
+
+  .home-stone-1-image {
+    width: 266px;
+    height: 357px;
+  }
+
+  .home-stone-2-image {
+    width: 294.16px;
+    height: 285.7px;
+  }
+
+  .home-stone-3-image {
+    width: 233px;
+    height: 318px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
