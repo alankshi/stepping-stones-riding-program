@@ -1,0 +1,22 @@
+.activities-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.activities-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  padding: 25px;
+  width: 50%;
+}
+
+.activities-carousel-container {
+  align-self: stretch;
+  width: 50%;
+}

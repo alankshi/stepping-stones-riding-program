@@ -5,6 +5,7 @@ import OurMission from "./pages/OurMission";
 import AboutUs from "./pages/AboutUs";
 import Lessons from "./pages/Lessons";
 import Volunteering from "./pages/Volunteering";
+import Activities from "./pages/Activities";
 import ContactUs from "./pages/ContactUs";
 import React, { createRef, useState, useEffect } from "react";
 
@@ -59,6 +60,7 @@ function App() {
         setUsedLink={setUsedLink}
       ></AboutUs>
       <Lessons ref={lessonsRef} navHeight={navHeight}></Lessons>
+      <Activities ref={activitiesRef} navHeight={navHeight}></Activities>
       <Volunteering ref={volunteerRef} navHeight={navHeight}></Volunteering>
       <ContactUs ref={contactRef} navHeight={navHeight}></ContactUs>
     </div>
