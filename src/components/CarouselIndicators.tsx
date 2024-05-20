@@ -1,4 +1,5 @@
 import "./CarouselIndicators.css";
+import React from "react";
 
 const CarouselIndicators = (props: {
   numImages: number;

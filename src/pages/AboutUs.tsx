@@ -7,6 +7,7 @@ const AboutUs = forwardRef(
     props: {
       navHeight: number;
       setUsedLink: React.Dispatch<React.SetStateAction<boolean>>;
+      isMobile: boolean;
     },
     ref: React.ForwardedRef<HTMLDivElement>
   ) => {
@@ -26,14 +27,6 @@ const AboutUs = forwardRef(
         });
       }
     }, [learningMore]);
-
-    const reRender = () => {
-      setRender(!render);
-    };
-
-    useEffect(() => {
-      window.addEventListener("resize", reRender);
-    });
 
     const contentRef: React.RefObject<HTMLDivElement> =
       useRef<HTMLDivElement>(null);
@@ -90,7 +83,7 @@ const AboutUs = forwardRef(
               }}
             />
             <button
-              className="about-learn-more-button"
+              className="about-learn-more-button text-button"
               onClick={handleClick}
               ref={buttonRef}
             >

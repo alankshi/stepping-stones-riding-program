@@ -11,6 +11,7 @@ const Home = forwardRef(
       missionRef: React.RefObject<HTMLDivElement>;
       navHeight: number;
       setUsedLink: React.Dispatch<React.SetStateAction<boolean>>;
+      isMobile: boolean;
     },
     ref: React.ForwardedRef<HTMLDivElement>
   ) => {
@@ -64,7 +65,7 @@ const Home = forwardRef(
         </div>
         <div className="home-button-container">
           <button
-            className="home-next-button"
+            className="home-next-button text-button"
             onClick={() => handleClick(props.missionRef)}
           >
             TAKE THE FIRST STEP

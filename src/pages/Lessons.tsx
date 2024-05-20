@@ -6,6 +6,7 @@ const Lessons = forwardRef(
   (
     props: {
       navHeight: number;
+      isMobile: boolean;
     },
     ref: React.ForwardedRef<HTMLDivElement>
   ) => {

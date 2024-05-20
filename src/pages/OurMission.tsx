@@ -3,7 +3,13 @@ import horseConga from "../assets/horse-conga.mp4";
 import React, { forwardRef } from "react";
 
 const OurMission = forwardRef(
-  (props: { navHeight: number }, ref: React.ForwardedRef<HTMLDivElement>) => {
+  (
+    props: {
+      navHeight: number;
+      isMobile: boolean;
+    },
+    ref: React.ForwardedRef<HTMLDivElement>
+  ) => {
     return (
       <div
         ref={ref}
