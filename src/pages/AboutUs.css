@@ -1,25 +1,3 @@
-.about-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  align-self: stretch;
-  overflow: clip;
-}
-
-.about-image {
-  width: 50%;
-}
-
-.about-content {
-  display: flex;
-  padding: 25px 50px;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  flex: 1 0 0;
-  align-self: stretch;
-}
-
 .about-main-text {
   align-self: stretch;
   color: #000;
@@ -31,15 +9,6 @@
   line-height: normal;
   user-select: text;
   z-index: 3;
-}
-
-.about-learn-more-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 27px;
-  align-self: stretch;
-  position: relative;
 }
 
 .about-learn-more-button {

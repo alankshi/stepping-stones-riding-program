@@ -23,6 +23,18 @@ const Volunteering = forwardRef(
     let img2width: number | undefined = img2Ref.current?.clientWidth;
     let img3width: number | undefined = img3Ref.current?.clientWidth;
 
+    if (props.isMobile) {
+      return (
+        <div
+          ref={ref}
+          style={{
+            scrollMarginTop: props.navHeight - 1,
+          }}
+          className="volunteering-container-mobile"
+        ></div>
+      );
+    }
+
     return (
       <div
         ref={ref}

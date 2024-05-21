@@ -57,10 +57,14 @@ const AboutUs = forwardRef(
         style={{
           scrollMarginTop: props.navHeight - 1,
         }}
-        className="about-container"
+        className="flex justify-center items-start self-stretch overflow-clip"
       >
-        <img src={ridingValley} className="about-image"></img>
-        <div ref={contentRef} className="about-content">
+        <img src={ridingValley} style={{ width: "50%" }}></img>
+        <div
+          ref={contentRef}
+          style={{ flex: "1 0 0" }}
+          className="about-content flex flex-col items-center self-stretch gap-6 py-6 px-12"
+        >
           <h1 className="title text-center">About Us</h1>
           <p className="about-main-text">
             We are located in the beautiful{" "}
@@ -74,7 +78,7 @@ const AboutUs = forwardRef(
             , giving riders access to excellent facilities with direct access to
             miles of trails.
           </p>
-          <div className="about-learn-more-container">
+          <div className="flex flex-col items-center gap-7 self-stretch relative">
             <hr
               className="about-learn-more-button-line"
               style={{

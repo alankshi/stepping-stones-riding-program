@@ -32,9 +32,14 @@ p {
 
 a {
   color: #0000ee;
+  cursor: pointer;
 }
 a:visited {
   color: #800080;
+}
+
+button {
+  cursor: pointer;
 }
 
 .title {

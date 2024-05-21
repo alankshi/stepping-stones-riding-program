@@ -21,8 +21,9 @@ const CarouselIndicators = (props: {
             i == props.currentImage
               ? "rgba(230, 230, 230, 1)"
               : "rgba(230, 230, 230, 0.6)",
+          borderRadius: "50%",
         }}
-        className="carousel-indicator"
+        className="carousel-indicator w-3 h-3 cursor-pointer"
         onClick={() => {
           handleClick(i);
         }}

@@ -1,8 +1,7 @@
-import "./Carousel.css";
 import CarouselNav from "./CarouselNav";
 import React, { useState, useRef, useEffect } from "react";
 
-const Carousel = (props: { images: string[] }) => {
+const Carousel = (props: { images: string[]; isMobile: boolean }) => {
   const [currentImage, setCurrentImage] = useState<number>(0);
 
   const imageRef: React.RefObject<HTMLDivElement> =
@@ -20,7 +19,11 @@ const Carousel = (props: { images: string[] }) => {
   };
 
   return (
-    <div className="container-carousel">
+    <div
+      className={`flex flex-col h-full relative ${
+        props.isMobile ? "py-6" : "p-6"
+      }`}
+    >
       <div
         className="bg-center bg-no-repeat bg-cover flex-1"
         ref={imageRef}

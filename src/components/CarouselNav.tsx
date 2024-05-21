@@ -11,7 +11,10 @@ const CarouselNav = (props: {
   setCurrentImage: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   return (
-    <div style={{ width: props.imageWidth }} className="carousel-nav-container">
+    <div
+      style={{ width: props.imageWidth, backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+      className="flex flex-row justify-center items-center self-stretch absolute bottom-6"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="75"
@@ -19,7 +22,7 @@ const CarouselNav = (props: {
         viewBox="0 0 75 75"
         fill="none"
         onClick={props.handleClickLeft}
-        className="carousel-nav-button"
+        className="carousel-nav-button cursor-pointer h-12 w-12"
       >
         <path
           fillRule="evenodd"
@@ -42,7 +45,7 @@ const CarouselNav = (props: {
         viewBox="0 0 75 75"
         fill="none"
         onClick={props.handleClickRight}
-        className="carousel-nav-button"
+        className="carousel-nav-button cursor-pointer h-12 w-12"
       >
         <path
           fillRule="evenodd"

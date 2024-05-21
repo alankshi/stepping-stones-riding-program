@@ -19,15 +19,64 @@ const Activities = forwardRef(
     },
     ref: React.ForwardedRef<HTMLDivElement>
   ) => {
+    if (props.isMobile) {
+      return (
+        <div
+          ref={ref}
+          style={{
+            scrollMarginTop: props.navHeight - 1,
+          }}
+          className="flex flex-col justify-center items-start self-stretch"
+        >
+          <div className="flex flex-col gap-0 items-center justify-start self-stretch p-6">
+            <h1 className="title text-center">Activities</h1>
+            <p className="text-paragraph">
+              Our riders have many experiences besides lessons in the arena. We
+              trail ride, attend clinics, tour vet clinics, go to horse shows,
+              compete in regional and national horse judging and hippology
+              contests, volunteer at horse events across the state, participate
+              in parades and exhibitions, go camping with the horses, and more!
+            </p>
+            <div style={{ height: "400px" }} className="w-full">
+              <Carousel
+                images={[
+                  img_0,
+                  img_1,
+                  img_2,
+                  img_3,
+                  img_4,
+                  img_5,
+                  img_6,
+                  img_7,
+                ]}
+                isMobile={props.isMobile}
+              ></Carousel>
+            </div>
+            <p className="text-paragraph">
+              For our long-term experienced riders, we also have
+              sponsorship/lease options available which give riders
+              opportunities to ride on their own outside of a lesson. Older and
+              more experienced riders can gain responsibility and leadership
+              opportunities by being paired with newer riders and assisting in
+              lessons and camps.
+            </p>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div
         ref={ref}
         style={{
           scrollMarginTop: props.navHeight - 1,
         }}
-        className="activities-container"
+        className="flex justify-center items-start self-stretch pl-6"
       >
-        <div className="activities-text-container">
+        <div
+          style={{ width: "40%" }}
+          className="flex flex-col gap-0 items-center justify-start self-stretch p-6"
+        >
           <h1 className="title text-center">Activities</h1>
           <p className="text-paragraph">
             Our riders have many experiences besides lessons in the arena. We

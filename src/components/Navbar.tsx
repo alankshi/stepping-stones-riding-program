@@ -84,33 +84,49 @@ const Navbar = forwardRef(
 
     if (props.isMobile) {
       return (
-        <div className="navbar-container" ref={ref}>
-          <div className="sticky-container-mobile">
-            <img src={logo} className="logo-mobile"></img>
+        <div
+          className="flex flex-col items-center self-stretch sticky top-0 z-30"
+          ref={ref}
+        >
+          <div className="flex justify-center self-stretch bg-white py-3 px-9">
+            <img src={logo} style={{ width: "201px", height: "46px" }}></img>
           </div>
-          <hr className="divider"></hr>
+          <hr className="w-full z-10 m-0 border-black"></hr>
           <div
-            className={`sliding-nav-container ${
-              visible || hamburgerClicked
-                ? "nav-container-visible"
-                : "nav-container-hidden"
-            }`}
+            style={{
+              top: visible || hamburgerClicked ? "0px" : "-100px",
+              backgroundColor: "#F5F5F5",
+              transition: "top 0.5s",
+            }}
+            className={
+              "sliding-nav-container p-4 flex justify-center self-stretch relative -z-40"
+            }
           >
             <span className="nonprofit-text-mobile">
               A 501(c)(3) Nonprofit Organization
             </span>
             <button
-              className="hamburger"
+              className="absolute"
               style={{
                 visibility: hamburgerClicked ? "hidden" : "visible",
+                width: 20,
+                height: 11,
+                right: 15,
+                top: 18,
+                borderTop: "#000 1px solid",
+                borderBottom: "#000 1px solid",
               }}
               onClick={handleHamburgerClick}
             ></button>
             <button
-              className="x-button"
+              className="absolute"
               onClick={handleHamburgerClick}
               style={{
                 visibility: hamburgerClicked ? "visible" : "hidden",
+                height: 15,
+                width: 15,
+                right: 15,
+                top: 16,
               }}
             >
               <svg
@@ -126,11 +142,12 @@ const Navbar = forwardRef(
             </button>
           </div>
           <div
-            className={`link-dropdown ${
-              hamburgerClicked
-                ? "link-dropdown-visible"
-                : "link-dropdown-hidden"
-            }`}
+            style={{
+              top: hamburgerClicked ? "115px" : "-400px",
+              backgroundColor: "#F5F5F5",
+              transition: "top 1s",
+            }}
+            className={"flex flex-col absolute w-full p-4 -z-50 gap-2.5"}
           >
             <a className="nav-link" onClick={() => handleClick(props.homeRef)}>
               HOME
@@ -176,27 +193,35 @@ const Navbar = forwardRef(
 
     return (
       <div
-        className="navbar-container"
+        className="flex flex-col items-center self-stretch sticky top-0 z-30"
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
         ref={ref}
       >
-        <div className="sticky-container">
-          <img src={logo} className="logo"></img>
-          <div className="nonprofit-text">
+        <div //sticky container
+          style={{ backgroundColor: "#F5F5F5" }}
+          className="flex justify-between items-center self-stretch py-3 px-9"
+        >
+          <img src={logo} style={{ width: "201px", height: "46px" }}></img>
+          <div className="nonprofit-text text-black text-base">
             A 501(c)(3) Nonprofit Organization
           </div>
         </div>
-        <hr className="divider"></hr>
-        <div
-          className={`nav-container ${
-            visible ? "nav-container-visible" : "nav-container-hidden"
-          }`}
+        <hr className="w-full z-10 m-0 border-black"></hr>
+        <div //nav container
+          style={{
+            top: visible ? "0px" : "-100px",
+            transition: "top 0.5s",
+            backgroundColor: "#F5F5F5",
+          }}
+          className={
+            "flex px-9 py-4 justify-between items-start self-stretch relative -z-40"
+          }
         >
           <a className="nav-link" onClick={() => handleClick(props.homeRef)}>
             HOME
           </a>
-          <div className="links-container">
+          <div className="links-container flex justify-between items-start">
             <a
               className="nav-link"
               onClick={() => handleClick(props.missionRef)}

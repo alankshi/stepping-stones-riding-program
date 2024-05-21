@@ -6,6 +6,14 @@
   overflow: clip;
 }
 
+.volunteering-container-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
 .volunteering-img-container {
   display: flex;
   justify-content: center;
