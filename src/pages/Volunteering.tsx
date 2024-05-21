@@ -31,7 +31,25 @@ const Volunteering = forwardRef(
             scrollMarginTop: props.navHeight - 1,
           }}
           className="volunteering-container-mobile"
-        ></div>
+        >
+          <div
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+            className="volunteering-top-text-container flex flex-col items-center absolute top-0 w-full p-2 gap-2.5"
+          >
+            <h1 className="title-mobile title text-center text-white text-stretch">
+              Volunteering
+            </h1>
+            <p className="subtitle text-white text-center text-stretch">
+              Volunteering is an essential component of our program, benefiting
+              both the horses and volunteers
+            </p>
+          </div>
+          <img ref={img3Ref} src={horsesDrinking} className="w-full"></img>
+          <div className="volunteering-bottom-text-container text-large text-white p-4 text-center">
+            We hope to grow solid and versatile riders with the skills needed to
+            continue their equestrian journey while gaining lifelong friends.
+          </div>
+        </div>
       );
     }
 
@@ -43,7 +61,10 @@ const Volunteering = forwardRef(
         }}
         className="volunteering-container"
       >
-        <div className="volunteering-top-text-container">
+        <div
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+          className="flex flex-col items-center absolute top-0 w-full p-2"
+        >
           <h1 className="title text-center text-white text-stretch">
             Volunteering
           </h1>

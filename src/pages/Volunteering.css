@@ -30,18 +30,6 @@
     width: auto; */
 }
 
-.volunteering-top-text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .volunteering-bottom-text-container {
   background: rgba(0, 0, 0, 0.36);
   display: flex;
@@ -51,4 +39,8 @@
   position: absolute;
   bottom: 0px;
   flex-direction: row;
+}
+
+.title-mobile {
+  font-size: 64px !important;
 }
