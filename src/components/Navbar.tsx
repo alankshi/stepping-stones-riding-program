@@ -88,7 +88,10 @@ const Navbar = forwardRef(
           className="flex flex-col items-center self-stretch sticky top-0 z-30"
           ref={ref}
         >
-          <div className="flex justify-center self-stretch bg-white py-3 px-9">
+          <div
+            style={{ backgroundColor: "#F5F5F5" }}
+            className="flex justify-center self-stretch py-3 px-9"
+          >
             <img src={logo} style={{ width: "201px", height: "46px" }}></img>
           </div>
           <hr className="w-full z-10 m-0 border-black"></hr>
