@@ -25,6 +25,69 @@ const Home = forwardRef(
       }
     };
 
+    if (props.isMobile) {
+      return (
+        <div
+          ref={ref}
+          className="home-container"
+          style={{
+            scrollMarginTop: props.navHeight - 1,
+          }}
+        >
+          <div className="home-main-container">
+            <div
+              style={{ marginBottom: "-100px", marginTop: "-45px" }}
+              className="flex justify-center align-center self-stretch"
+            >
+              <div className="home-stone-0-container">
+                <g className="home-mask-0-mobile">
+                  <img className="home-stone-0-image" src={adultOnHorse} />
+                </g>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center items-end self-stretch">
+              <div className="text-center title self-stretch">
+                HORSEBACK<br></br>RIDING
+              </div>
+              <div className="home-subtitle-main bottom-0">
+                One step at a time
+              </div>
+            </div>
+          </div>
+          <div className="home-button-container pt-6">
+            <button
+              className="home-next-button text-button"
+              onClick={() => handleClick(props.missionRef)}
+            >
+              TAKE THE FIRST STEP
+            </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="92"
+              height="29"
+              viewBox="0 0 92 29"
+              fill="none"
+            >
+              <line
+                x1="0.249939"
+                y1="1.20966"
+                x2="46.3211"
+                y2="27.8089"
+                stroke="black"
+              />
+              <line
+                x1="45.6788"
+                y1="27.5566"
+                x2="91.75"
+                y2="0.957378"
+                stroke="black"
+              />
+            </svg>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div
         ref={ref}
