@@ -95,6 +95,7 @@ const Activities = forwardRef(
         <div className="activities-carousel-container">
           <Carousel
             images={[img_0, img_1, img_2, img_3, img_4, img_5, img_6, img_7]}
+            isMobile={props.isMobile}
           ></Carousel>
         </div>
       </div>
