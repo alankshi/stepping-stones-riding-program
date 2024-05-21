@@ -19,9 +19,9 @@ const Volunteering = forwardRef(
     const img3Ref: React.RefObject<HTMLImageElement> =
       useRef<HTMLImageElement>(null);
 
-    let img1width: number | undefined = img1Ref.current?.clientWidth;
-    let img2width: number | undefined = img2Ref.current?.clientWidth;
-    let img3width: number | undefined = img3Ref.current?.clientWidth;
+    const img1width: number | undefined = img1Ref.current?.clientWidth;
+    const img2width: number | undefined = img2Ref.current?.clientWidth;
+    const img3width: number | undefined = img3Ref.current?.clientWidth;
 
     if (props.isMobile) {
       return (

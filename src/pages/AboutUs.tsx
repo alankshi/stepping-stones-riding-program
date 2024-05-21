@@ -59,11 +59,10 @@ const AboutUs = forwardRef(
           }}
           className="flex justify-center items-start self-stretch overflow-clip"
         >
-          <img src={ridingValley} style={{ width: "50%" }}></img>
           <div
             ref={contentRef}
             style={{ flex: "1 0 0" }}
-            className="about-content flex flex-col items-center self-stretch gap-6 py-6 px-12"
+            className="about-content flex flex-col items-center self-stretch gap-6 p-4 pb-16"
           >
             <h1 className="title text-center">About Us</h1>
             <p className="about-main-text">
@@ -87,7 +86,12 @@ const AboutUs = forwardRef(
                 }}
               />
               <button
-                className="about-learn-more-button text-button"
+                style={{
+                  border: "5px solid #000",
+                  backgroundColor: "#F5F5F5",
+                  width: "75%",
+                }}
+                className="text-button justify-center flex items-center z-10 py-5"
                 onClick={handleClick}
                 ref={buttonRef}
               >
