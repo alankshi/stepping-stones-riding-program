@@ -90,6 +90,15 @@
   bottom: -113.833px;
 }
 
+.home-mask-0-mobile {
+  mask-image: url("../assets/stone-silhouette.png");
+  mask-size: 327.048px 411.019px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transform: rotate(var(--home-stone-0-rotation));
+  position: absolute;
+}
+
 .home-mask-1 {
   mask-image: url("../assets/stone-silhouette.png");
   mask-size: 264.189px 356px;

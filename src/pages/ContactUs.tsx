@@ -40,10 +40,10 @@ const ContactUs = forwardRef(
           We are available start_day to end_day from start_time to end_time.
           Feel free to contact us with any questions
         </p>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center w-full">
           <span className="text-large text-center">(123) 456 7890</span>
           <a
-            className="text-large text-center underline"
+            className="text-large text-center underline break-words w-full text-wrap"
             href="mailto: steppingstonesridingprogram@gmail.com"
           >
             steppingstonesridingprogram@gmail.com

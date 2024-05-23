@@ -12,7 +12,7 @@ const Lessons = forwardRef(
   ) => {
     const contentRef: React.RefObject<HTMLParagraphElement> =
       useRef<HTMLParagraphElement>(null);
-    let parHeight: number | undefined = contentRef.current?.clientHeight;
+    const parHeight: number | undefined = contentRef.current?.clientHeight;
 
     if (props.isMobile) {
       return (

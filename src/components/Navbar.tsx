@@ -43,6 +43,9 @@ const Navbar = forwardRef(
       if (props.usedLink) {
         props.setUsedLink(false);
       }
+      if (props.isMobile) {
+        setHamburgerClicked(false);
+      }
     };
     const handleEnter = () => {
       if (!visible) {

@@ -1,4 +1,5 @@
 .activities-carousel-container {
   align-self: stretch;
   width: 60%;
+  min-height: 75vh;
 }
