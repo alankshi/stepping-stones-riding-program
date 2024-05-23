@@ -1,5 +1,5 @@
 import CarouselNav from "./CarouselNav";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
 const Carousel = (props: { images: string[]; isMobile: boolean }) => {
   const [currentImage, setCurrentImage] = useState<number>(0);

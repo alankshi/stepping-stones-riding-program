@@ -1,6 +1,6 @@
 import "./CarouselNav.css";
 import CarouselIndicators from "./CarouselIndicators";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const CarouselNav = (props: {
   handleClickLeft: () => void;
