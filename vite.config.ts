@@ -10,5 +10,5 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
   },
-  base: "/stepping-stones-riding-program/",
+  // base: "/stepping-stones-riding-program/",
 });

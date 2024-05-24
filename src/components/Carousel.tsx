@@ -6,7 +6,7 @@ const Carousel = (props: { images: string[]; isMobile: boolean }) => {
 
   const imageRef: React.RefObject<HTMLDivElement> =
     useRef<HTMLDivElement>(null);
-  let imageWidth: number | undefined = imageRef.current?.clientWidth;
+  const imageWidth: number | undefined = imageRef.current?.clientWidth;
 
   const handleClickRight = () => {
     setCurrentImage((currentImage + 1) % props.images.length);
