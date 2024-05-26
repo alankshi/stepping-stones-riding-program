@@ -6,6 +6,7 @@ import AboutUs from "./pages/AboutUs";
 import Lessons from "./pages/Lessons";
 import Volunteering from "./pages/Volunteering";
 import Activities from "./pages/Activities";
+import CurrentEvents from "./pages/CurrentEvents";
 import ContactUs from "./pages/ContactUs";
 import React, { createRef, useState, useEffect } from "react";
 
@@ -91,6 +92,7 @@ function App() {
         navHeight={navHeight}
         isMobile={isMobile}
       ></Activities>
+      <CurrentEvents isMobile={isMobile}></CurrentEvents>
       <Volunteering
         ref={volunteerRef}
         navHeight={navHeight}

@@ -20,7 +20,7 @@ const ContactUs = forwardRef(
         className="contact-container"
       >
         <div className="flex flex-col justify-center">
-          <h1 className="title">Contact Us</h1>
+          <h1 className="title text-center">Contact Us</h1>
           <div className="flex flex-row items-center w-full justify-center gap-5">
             <a
               target="_blank"
