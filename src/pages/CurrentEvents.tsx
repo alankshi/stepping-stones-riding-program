@@ -11,14 +11,22 @@ const CurrentEvents = (props: { isMobile: boolean }) => {
           We are having our ribbon cutting ceremony at our new location on June
           1st, 2024. Please come check it out!
         </p>
-        <img src={eventImage} className="self-stretch"></img>
+        <img
+          src={eventImage}
+          className="self-stretch"
+          alt="Current event image"
+        ></img>
       </div>
     );
   }
 
   return (
     <div className="flex flex-row p-6 gap-6 self-stretch items-start justify-center events-container">
-      <img src={eventImage} className="half-width self-stretch"></img>
+      <img
+        src={eventImage}
+        className="half-width self-stretch"
+        alt="Current event image"
+      ></img>
       <div className="flex flex-col self-stretch half-width gap-4">
         <h1 className="title text-center">Current Events</h1>
         <p className="subtitle text-center">

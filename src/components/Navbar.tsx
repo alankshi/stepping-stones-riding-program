@@ -212,7 +212,11 @@ const Navbar = forwardRef(
           style={{ backgroundColor: "#F5F5F5" }}
           className="flex justify-between items-center self-stretch py-3 px-9"
         >
-          <img src={logo} style={{ width: "201px", height: "46px" }}></img>
+          <img
+            src={logo}
+            style={{ width: "201px", height: "46px" }}
+            alt="Stepping Stones Riding Program logo"
+          ></img>
           <div className="nonprofit-text text-black text-base">
             A 501(c)(3) Nonprofit Organization
           </div>
