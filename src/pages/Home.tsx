@@ -188,7 +188,11 @@ const Home = forwardRef(
             >
               <div className="home-stone-0-container">
                 <g className="home-mask-0-mobile">
-                  <img className="home-stone-0-image" src={adultOnHorse} />
+                  <img
+                    className="home-stone-0-image"
+                    src={adultOnHorse}
+                    alt="Adult woman rides on a horse with 2 other adults, also on horses, in the background."
+                  />
                 </g>
               </div>
             </div>
@@ -247,22 +251,38 @@ const Home = forwardRef(
           <div className="home-stones-container">
             <div className="home-stone-0-container">
               <g className="home-mask-0">
-                <img className="home-stone-0-image" src={adultOnHorse} />
+                <img
+                  className="home-stone-0-image"
+                  src={adultOnHorse}
+                  alt="Adult woman rides on a horse with 2 other adults, also on horses, in the background."
+                />
               </g>
             </div>
             <div className="home-stone-1-container">
               <g className="home-mask-1">
-                <img className="home-stone-1-image" src={twoRidingHorse} />
+                <img
+                  className="home-stone-1-image"
+                  src={twoRidingHorse}
+                  alt="Two teens ride on the same horse while smiling with mountains and sky in the background."
+                />
               </g>
             </div>
             <div className="home-stone-2-container">
               <g className="home-mask-2">
-                <img className="home-stone-2-image" src={horseJumping} />
+                <img
+                  className="home-stone-2-image"
+                  src={horseJumping}
+                  alt="Child rides on a horse jumping over a low hurdle."
+                />
               </g>
             </div>
             <div className="home-stone-3-container">
               <g className="home-mask-3">
-                <img className="home-stone-3-image" src={huggingHorse} />
+                <img
+                  className="home-stone-3-image"
+                  src={huggingHorse}
+                  alt="Young boy smiles with closed eyes while hugging the nose of a horse whose eyes are closed."
+                />
               </g>
             </div>
           </div>

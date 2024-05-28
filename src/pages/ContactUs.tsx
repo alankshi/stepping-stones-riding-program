@@ -26,13 +26,21 @@ const ContactUs = forwardRef(
               target="_blank"
               href="https://www.instagram.com/s.s.r.p?igsh=ZWI2YzEzYmMxYg=="
             >
-              <img className="contact-icon" src={instagramIcon}></img>
+              <img
+                className="contact-icon"
+                src={instagramIcon}
+                alt="Instagram logo"
+              ></img>
             </a>
             <a
               target="_blank"
               href="https://www.facebook.com/groups/SteppingStonesTO/?ref=share_group_link"
             >
-              <img className="contact-icon" src={facebookIcon}></img>
+              <img
+                className="contact-icon"
+                src={facebookIcon}
+                alt="Facebook logo"
+              ></img>
             </a>
           </div>
         </div>

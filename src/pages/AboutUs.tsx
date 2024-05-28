@@ -152,7 +152,11 @@ const AboutUs = forwardRef(
         }}
         className="flex justify-center items-start self-stretch overflow-clip"
       >
-        <img src={ridingValley} style={{ width: "50%" }}></img>
+        <img
+          src={ridingValley}
+          style={{ width: "50%" }}
+          alt="Looking from behind, two people ride on horses into a beautiful green valley with bright blue sky and white clouds."
+        ></img>
         <div
           ref={contentRef}
           style={{ flex: "1 0 0" }}

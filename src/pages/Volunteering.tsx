@@ -44,7 +44,12 @@ const Volunteering = forwardRef(
               both the horses and volunteers
             </p>
           </div>
-          <img ref={img3Ref} src={horsesDrinking} className="w-full"></img>
+          <img
+            ref={img3Ref}
+            src={horsesDrinking}
+            className="w-full"
+            alt="4 horses surround a bucket of water, looking up from drinking at the camera."
+          ></img>
           <div className="volunteering-bottom-text-container text-large text-white p-4 text-center">
             We hope to grow solid and versatile riders with the skills needed to
             continue their equestrian journey while gaining lifelong friends.
@@ -78,16 +83,19 @@ const Volunteering = forwardRef(
             ref={img1Ref}
             src={encirclingHorse}
             className="volunteering-img"
+            alt="7 adults surround a horse, listening to someone talking not shown in the image."
           ></img>
           <img
             ref={img2Ref}
             src={pullingWheelbarrow}
             className="volunteering-img"
+            alt="5 children work together to pull a wheelbarrow away from the camera towards a metal gate."
           ></img>
           <img
             ref={img3Ref}
             src={horsesDrinking}
             className="volunteering-img"
+            alt="4 horses surround a bucket of water, looking up from drinking at the camera."
           ></img>
         </div>
         <div className="volunteering-bottom-text-container">

@@ -45,7 +45,11 @@ const Lessons = forwardRef(
               you in when possible!
             </p>
           </div>
-          <img src={horseHooray} className="lessons-background-image"></img>
+          <img
+            src={horseHooray}
+            className="lessons-background-image"
+            alt="Seven horses with riders stand in a row facing the camera. The riders are all smiling with arms raised."
+          ></img>
         </div>
       );
     }
