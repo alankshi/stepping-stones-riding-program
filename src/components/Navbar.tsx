@@ -95,7 +95,11 @@ const Navbar = forwardRef(
             style={{ backgroundColor: "#F5F5F5" }}
             className="flex justify-center self-stretch py-3 px-9"
           >
-            <img src={logo} style={{ width: "201px", height: "46px" }}></img>
+            <img
+              src={logo}
+              style={{ width: "201px", height: "46px" }}
+              alt="Stepping Stones Riding Program logo"
+            ></img>
           </div>
           <hr className="w-full z-10 m-0 border-black"></hr>
           <div
