@@ -2,14 +2,14 @@ import "./Activities.css";
 import Carousel from "../components/Carousel";
 import React, { forwardRef } from "react";
 
-import img_0 from "../assets/carousel-images/0.jpg";
-import img_1 from "../assets/carousel-images/1.jpg";
+import img_0 from "../assets/carousel-images/0.avif";
+import img_1 from "../assets/carousel-images/1.avif";
 import img_2 from "../assets/carousel-images/2.jpg";
 import img_3 from "../assets/carousel-images/3.jpg";
 import img_4 from "../assets/carousel-images/4.jpg";
 import img_5 from "../assets/carousel-images/5.jpg";
-import img_6 from "../assets/carousel-images/6.png";
-import img_7 from "../assets/carousel-images/7.jpg";
+import img_6 from "../assets/carousel-images/6.avif";
+import img_7 from "../assets/carousel-images/7.avif";
 
 const Activities = forwardRef(
   (

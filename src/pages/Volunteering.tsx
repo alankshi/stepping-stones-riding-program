@@ -1,6 +1,6 @@
 import "./Volunteering.css";
-import encirclingHorse from "../assets/encircling-horse.jpg";
-import pullingWheelbarrow from "../assets/pulling-wheelbarrow.jpg";
+import encirclingHorse from "../assets/encircling-horse.avif";
+import pullingWheelbarrow from "../assets/pulling-wheelbarrow.avif";
 import horsesDrinking from "../assets/horses-drinking.jpg";
 import React, { forwardRef, useRef } from "react";
 

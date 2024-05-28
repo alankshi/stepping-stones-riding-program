@@ -1,8 +1,8 @@
 import "./Home.css";
-import adultOnHorse from "../assets/adult-on-horse.png";
-import twoRidingHorse from "../assets/two-riding-horse.png";
-import horseJumping from "../assets/horse-jumping.png";
-import huggingHorse from "../assets/hugging-horse.png";
+import adultOnHorse from "../assets/adult-on-horse.avif";
+import twoRidingHorse from "../assets/two-riding-horse.avif";
+import horseJumping from "../assets/horse-jumping.avif";
+import huggingHorse from "../assets/hugging-horse.avif";
 import React, { forwardRef } from "react";
 
 const Home = forwardRef(

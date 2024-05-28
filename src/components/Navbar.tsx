@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import logo from "../assets/logo-long-text.png";
+import logo from "../assets/logo-long-text.avif";
 import React, { forwardRef, useState, useEffect } from "react";
 
 const Navbar = forwardRef(

@@ -80,7 +80,7 @@
 }
 
 .home-mask-0 {
-  mask-image: url("../assets/stone-silhouette.png");
+  mask-image: url("../assets/stone-silhouette.avif");
   mask-size: 327.048px 411.019px;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -91,7 +91,7 @@
 }
 
 .home-mask-0-mobile {
-  mask-image: url("../assets/stone-silhouette.png");
+  mask-image: url("../assets/stone-silhouette.avif");
   mask-size: 327.048px 411.019px;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -100,7 +100,7 @@
 }
 
 .home-mask-1 {
-  mask-image: url("../assets/stone-silhouette.png");
+  mask-image: url("../assets/stone-silhouette.avif");
   mask-size: 264.189px 356px;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -111,7 +111,7 @@
 }
 
 .home-mask-2 {
-  mask-image: url("../assets/stone-silhouette.png");
+  mask-image: url("../assets/stone-silhouette.avif");
   mask-size: 224.416px 281.682px;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -123,7 +123,7 @@
 }
 
 .home-mask-3 {
-  mask-image: url("../assets/stone-silhouette.png");
+  mask-image: url("../assets/stone-silhouette.avif");
   mask-size: 195.7px 260.889px;
   mask-repeat: no-repeat;
   mask-position: center;
