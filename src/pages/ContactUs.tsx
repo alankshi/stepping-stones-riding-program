@@ -1,7 +1,8 @@
 import "./ContactUs.css";
 import instagramIcon from "../assets/instagram-icon.png";
 import facebookIcon from "../assets/facebook-icon.png";
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
+import contactText from "../assets/editable-content/contact-us.txt";
 
 const ContactUs = forwardRef(
   (
@@ -11,6 +12,15 @@ const ContactUs = forwardRef(
     },
     ref: React.ForwardedRef<HTMLDivElement>
   ) => {
+    const [paragraph, setParagraph] = useState<string>("Loading");
+    fetch(contactText)
+      .then((response) => {
+        return response.text();
+      })
+      .then((responseText) => {
+        setParagraph(responseText);
+      });
+
     return (
       <div
         ref={ref}
@@ -44,9 +54,8 @@ const ContactUs = forwardRef(
             </a>
           </div>
         </div>
-        <p className="contact-body text-large">
-          We are available Monday throgh Saturday from 9AM to 5PM. Feel free to
-          contact us with any questions
+        <p className="contact-body text-large whitespace-pre-line">
+          {paragraph}
         </p>
         <div className="flex flex-col justify-center w-full">
           {/* <span className="text-large text-center">(123) 456 7890</span> */}

@@ -2,7 +2,12 @@ import "./Volunteering.css";
 import encirclingHorse from "../assets/encircling-horse.avif";
 import pullingWheelbarrow from "../assets/pulling-wheelbarrow.avif";
 import horsesDrinking from "../assets/horses-drinking.jpg";
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef, useRef, useState } from "react";
+
+import volunteeringSubtitle from "../assets/editable-content/volunteering-subtitle.txt";
+import volunteeringParLeft from "../assets/editable-content/volunteering-paragraph-left.txt";
+import volunteeringParCenter from "../assets/editable-content/volunteering-paragraph-center.txt";
+import volunteeringParRight from "../assets/editable-content/volunteering-paragraph-right.txt";
 
 const Volunteering = forwardRef(
   (
@@ -19,9 +24,43 @@ const Volunteering = forwardRef(
     const img3Ref: React.RefObject<HTMLImageElement> =
       useRef<HTMLImageElement>(null);
 
+    const [subtitle, setSubtitle] = useState<string>("Loading...");
+    const [parLeft, setParLeft] = useState<string>("Loading...");
+    const [parCenter, setParCenter] = useState<string>("Loading...");
+    const [parRight, setParRight] = useState<string>("Loading...");
+
     const img1width: number | undefined = img1Ref.current?.clientWidth;
     const img2width: number | undefined = img2Ref.current?.clientWidth;
     const img3width: number | undefined = img3Ref.current?.clientWidth;
+
+    fetch(volunteeringSubtitle)
+      .then((response) => {
+        return response.text();
+      })
+      .then((responseText) => {
+        setSubtitle(responseText);
+      });
+    fetch(volunteeringParLeft)
+      .then((response) => {
+        return response.text();
+      })
+      .then((responseText) => {
+        setParLeft(responseText);
+      });
+    fetch(volunteeringParCenter)
+      .then((response) => {
+        return response.text();
+      })
+      .then((responseText) => {
+        setParCenter(responseText);
+      });
+    fetch(volunteeringParRight)
+      .then((response) => {
+        return response.text();
+      })
+      .then((responseText) => {
+        setParRight(responseText);
+      });
 
     if (props.isMobile) {
       return (
@@ -39,9 +78,8 @@ const Volunteering = forwardRef(
             <h1 className="title-mobile title text-center text-white text-stretch">
               Volunteering
             </h1>
-            <p className="subtitle text-white text-center text-stretch">
-              Volunteering is an essential component of our program, benefiting
-              both the horses and volunteers
+            <p className="subtitle text-white text-center text-stretch whitespace-pre-line">
+              {subtitle}
             </p>
           </div>
           <img
@@ -50,9 +88,8 @@ const Volunteering = forwardRef(
             className="w-full"
             alt="4 horses surround a bucket of water, looking up from drinking at the camera."
           ></img>
-          <div className="volunteering-bottom-text-container text-large text-white p-4 text-center">
-            We hope to grow solid and versatile riders with the skills needed to
-            continue their equestrian journey while gaining lifelong friends.
+          <div className="volunteering-bottom-text-container text-large text-white p-4 text-center whitespace-pre-line">
+            {parLeft}
           </div>
         </div>
       );
@@ -73,9 +110,8 @@ const Volunteering = forwardRef(
           <h1 className="title text-center text-white text-stretch">
             Volunteering
           </h1>
-          <p className="subtitle text-white text-center text-stretch">
-            Volunteering is an essential component of our program, benefiting
-            both the horses and volunteers
+          <p className="subtitle text-white text-center text-stretch whitespace-pre-line">
+            {subtitle}
           </p>
         </div>
         <div className="volunteering-img-container">
@@ -99,18 +135,23 @@ const Volunteering = forwardRef(
           ></img>
         </div>
         <div className="volunteering-bottom-text-container">
-          <p className="text-large text-white p-4" style={{ width: img1width }}>
-            We hope to grow solid and versatile riders with the skills needed to
-            continue their equestrian journey while gaining lifelong friends.
+          <p
+            className="text-large text-white p-4 whitespace-pre-line"
+            style={{ width: img1width }}
+          >
+            {parLeft}
           </p>
-          <p className="text-large text-white p-4" style={{ width: img2width }}>
-            The horses benefit from a village of volunteers who recognize their
-            unique personalities and needs, providing consistent high quality
-            care.
+          <p
+            className="text-large text-white p-4 whitespace-pre-line"
+            style={{ width: img2width }}
+          >
+            {parCenter}
           </p>
-          <p className="text-large text-white p-4" style={{ width: img3width }}>
-            Volunteers learn to care for the horses through experience and gain
-            confidence, responsibility, and accountability.
+          <p
+            className="text-large text-white p-4 whitespace-pre-line"
+            style={{ width: img3width }}
+          >
+            {parRight}
           </p>
         </div>
       </div>

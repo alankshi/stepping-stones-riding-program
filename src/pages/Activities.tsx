@@ -1,6 +1,9 @@
 import "./Activities.css";
 import Carousel from "../components/Carousel";
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
+
+import activitiesPar1 from "../assets/editable-content/activities-above.txt";
+import activitiesPar2 from "../assets/editable-content/activities-below.txt";
 
 import img_0 from "../assets/carousel-images/0.avif";
 import img_1 from "../assets/carousel-images/1.avif";
@@ -19,6 +22,26 @@ const Activities = forwardRef(
     },
     ref: React.ForwardedRef<HTMLDivElement>
   ) => {
+    const [activitiesParagraph1, setActivitiesParagraph1] =
+      useState<string>("Loading...");
+    const [activitiesParagraph2, setActivitiesParagraph2] =
+      useState<string>("Loading...");
+
+    fetch(activitiesPar1)
+      .then((response) => {
+        return response.text();
+      })
+      .then((responseText) => {
+        setActivitiesParagraph1(responseText);
+      });
+    fetch(activitiesPar2)
+      .then((response) => {
+        return response.text();
+      })
+      .then((responseText) => {
+        setActivitiesParagraph2(responseText);
+      });
+
     if (props.isMobile) {
       return (
         <div
@@ -30,12 +53,8 @@ const Activities = forwardRef(
         >
           <div className="flex flex-col gap-0 items-center justify-start self-stretch p-6">
             <h1 className="title text-center">Activities</h1>
-            <p className="text-paragraph">
-              Our riders have many experiences besides lessons in the arena. We
-              trail ride, attend clinics, tour vet clinics, go to horse shows,
-              compete in regional and national horse judging and hippology
-              contests, volunteer at horse events across the state, participate
-              in parades and exhibitions, go camping with the horses, and more!
+            <p className="text-paragraph whitespace-pre-line">
+              {activitiesParagraph1}
             </p>
             <div style={{ height: "400px" }} className="w-full">
               <Carousel
@@ -52,13 +71,8 @@ const Activities = forwardRef(
                 isMobile={props.isMobile}
               ></Carousel>
             </div>
-            <p className="text-paragraph">
-              For our long-term experienced riders, we also have
-              sponsorship/lease options available which give riders
-              opportunities to ride on their own outside of a lesson. Older and
-              more experienced riders can gain responsibility and leadership
-              opportunities by being paired with newer riders and assisting in
-              lessons and camps.
+            <p className="text-paragraph whitespace-pre-line">
+              {activitiesParagraph2}
             </p>
           </div>
         </div>
@@ -78,18 +92,10 @@ const Activities = forwardRef(
           className="flex flex-col gap-0 items-center justify-start self-stretch p-6"
         >
           <h1 className="title text-center">Activities</h1>
-          <p className="text-paragraph">
-            Our riders have many experiences besides lessons in the arena. We
-            trail ride, attend clinics, tour vet clinics, go to horse shows,
-            compete in regional and national horse judging and hippology
-            contests, volunteer at horse events across the state, participate in
-            parades and exhibitions, go camping with the horses, and more!
-            <br></br> <br></br>For our long-term experienced riders, we also
-            have sponsorship/lease options available which give riders
-            opportunities to ride on their own outside of a lesson. Older and
-            more experienced riders can gain responsibility and leadership
-            opportunities by being paired with newer riders and assisting in
-            lessons and camps.
+          <p className="text-paragraph whitespace-pre-line">
+            {activitiesParagraph1}
+            <br></br> <br></br>
+            {activitiesParagraph2}
           </p>
         </div>
         <div className="activities-carousel-container">

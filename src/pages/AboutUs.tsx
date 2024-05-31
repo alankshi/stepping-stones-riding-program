@@ -1,6 +1,7 @@
 import "./AboutUs.css";
 import ridingValley from "../assets/riding-valley.jpg";
 import React, { useState, forwardRef, useRef, useEffect } from "react";
+import learnMoreText from "../assets/editable-content/about-us-learn-more.txt";
 
 const AboutUs = forwardRef(
   (
@@ -12,6 +13,11 @@ const AboutUs = forwardRef(
     ref: React.ForwardedRef<HTMLDivElement>
   ) => {
     const [learningMore, setLearningMore] = useState<boolean>(false);
+    const [paragraphText, setParagraphText] = useState<string>("Loading...");
+
+    fetch(learnMoreText)
+      .then((response) => response.text())
+      .then((responseText) => setParagraphText(responseText));
 
     const handleClick = (): void => {
       setLearningMore(!learningMore);
@@ -98,17 +104,11 @@ const AboutUs = forwardRef(
                 LEARN MORE
               </button>
               <p
-                className="text-paragraph self-stretch"
+                className="text-paragraph self-stretch whitespace-pre-line"
                 style={{}}
                 ref={textRef}
               >
-                Stepping Stones was founded as a nonprofit in 2012 by three
-                friends, Kylie Joseph, Nancy McChesney, and Meaghan Shaffer to
-                connect horses and people regardless of circumstance and wealth.
-                Fate led us to the Conejo Valley YMCA, where we put hundreds of
-                campers on horses each summer. When the YMCA closed permanently
-                due to COVID-19, we relocated temporarily, and finally settled
-                in Santa Rosa Valley.
+                {paragraphText}
               </p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -190,14 +190,12 @@ const AboutUs = forwardRef(
             >
               LEARN MORE
             </button>
-            <p className="text-paragraph self-stretch" style={{}} ref={textRef}>
-              Stepping Stones was founded as a nonprofit in 2012 by three
-              friends, Kylie Joseph, Nancy McChesney, and Meaghan Shaffer to
-              connect horses and people regardless of circumstance and wealth.
-              Fate led us to the Conejo Valley YMCA, where we put hundreds of
-              campers on horses each summer. When the YMCA closed permanently
-              due to COVID-19, we relocated temporarily, and finally settled in
-              Santa Rosa Valley.
+            <p
+              className="text-paragraph self-stretch whitespace-pre-line"
+              style={{}}
+              ref={textRef}
+            >
+              {paragraphText}
             </p>
             <svg
               xmlns="http://www.w3.org/2000/svg"

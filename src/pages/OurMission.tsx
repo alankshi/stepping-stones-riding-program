@@ -1,6 +1,7 @@
 import "./OurMission.css";
 import horseConga from "../assets/horse-conga.mp4";
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
+import missionText from "../assets/editable-content/our-mission-subtitle.txt";
 
 const OurMission = forwardRef(
   (
@@ -10,6 +11,16 @@ const OurMission = forwardRef(
     },
     ref: React.ForwardedRef<HTMLDivElement>
   ) => {
+    const [subtitleText, setSubtitleText] = useState<string>("Loading...");
+
+    fetch(missionText)
+      .then((response) => {
+        return response.text();
+      })
+      .then((responseText) => {
+        setSubtitleText(responseText);
+      });
+
     if (props.isMobile) {
       return (
         <div
@@ -31,10 +42,8 @@ const OurMission = forwardRef(
             <h1 className="title text-center text-white title-mobile">
               Our Mission
             </h1>
-            <p className="subtitle text-center text-white mission-text">
-              Our mission at Stepping Stones is to connect horses and people
-              regardless of circumstance and wealth with low-cost riding lessons
-              and horse experiences
+            <p className="subtitle text-center text-white mission-text whitespace-pre-line">
+              {subtitleText}
             </p>
           </div>
         </div>
@@ -56,10 +65,8 @@ const OurMission = forwardRef(
         </div>
         <div className="mission-text-container">
           <h1 className="title text-center text-white">Our Mission</h1>
-          <p className="subtitle text-center text-white mission-text">
-            Our mission at Stepping Stones is to connect horses and people
-            regardless of circumstance and wealth with low-cost riding lessons
-            and horse experiences
+          <p className="subtitle text-center text-white mission-text whitespace-pre-line">
+            {subtitleText}
           </p>
         </div>
       </div>
