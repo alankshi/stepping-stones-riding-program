@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# Stepping Stones Riding Program
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website for the [Stepping Stones Riding Program](https://maps.app.goo.gl/FuUYfudwWenJe86P6)
 
-Currently, two official plugins are available:
+# EDITING THE WEBSITE
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To edit website content, navigate to the following file directory:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+\src\assets\editable-content
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Here, you can change the contents of the files to change what will render on the website. Take note that line breaks in the text files will be reflected on the website.
+
+## **WARNING:** Make sure not to change file names
+
+If changing an image, upload a new image with the same file name as the old image and delete (or rename) the old image.
+
+List of file names:
+
+- about-us-learn-more.txt
+- activities-above.txt
+- activities-below.txt
+- contact-us.txt
+- current-event.jpeg
+- current-event.txt
+- lessons.txt
+- our-mission-subtitle.txt
+- volunteering-paragraph-center.txt
+- volunteering-paragraph-left.txt
+- volunteering-paragraph-right.txt
+- volunteering-subtitle.txt
